@@ -35,7 +35,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="32" height="32" alt="Worlcoin logo">
+        <img src="./assets/images/worldcoin2094.logowik.com.webp" width="32" height="32" alt="Worlcoin logo">
         Worldcoin
       </a>
 
@@ -47,25 +47,22 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#instruction" class="navbar-link" data-nav-link>Instructions</a>
+            <a href="#transfer" class="navbar-link" data-nav-link>Instructions</a>
           </li>
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Buy Worlcoin</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Sell Worlcoin</a>
+            <a href="#market" class="navbar-link" data-nav-link>Market</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link></a>
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
           </li>
-
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>WLD/USD</a>
+            <a href="https://worldcoin.org" class="navbar-link" data-nav-link> Statement</a>
           </li>
 
+
+         
         </ul>
       </nav>
 
@@ -86,48 +83,83 @@
 
   <main>
     <article>
-
-      <section class="section hero" aria-label="hero" data-section>
+      <section id="hero-section" class="section hero" aria-label="hero" data-section>
         <div class="container">
-          <div class="hero-content">
-            <h1 class="h1 hero-title">Introducing World Web</h1>
-            <p class="hero-text">
+          <!-- Hero Content -->
+          <div id="hero-content" class="hero-content">
+            <!-- Hero Title -->
+            <h1 id="hero-title" class="h1 hero-title">Introducing World Web</h1>
+            <!-- Hero Text -->
+            <p id="hero-text" class="hero-text">
               From the creators of the groundbreaking World App comes a brand new platform - World Web! We've expanded our vision beyond the app to bring you an innovative website designed to provide digital identity and empower global finance for all.
             </p>
-            <a href="#instruction" class="btn btn-primary">Get started now</a>
+            <!-- "Get Started Now" Button -->
+            <a href="#instruction" id="get-started-btn" class="btn btn-primary">Get started now</a>
           </div>
-          <figure class="hero-banner">
-            <img src="./assets/images/hero-banner.png" width="570" height="448" alt="hero banner" class="w-100">
-          </figure>
-          <!-- Video Element -->
-          <video controls width="570" height="320">
-            <source src="WORLDCOIN - Orb Bookings_v004_c001.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <!-- Hero Media (Image and Video) -->
+          <div class="hero-media">
+            <!-- Hero Banner Image -->
+            <figure id="hero-banner" class="hero-banner">
+              <img src="./assets/images/hero-banner.png" width="570" height="448" alt="hero banner" class="w-100">
+            </figure>
+            <!-- Video Element -->
+            <video id="hero-video" controls loop>
+              <source src="WORLDCOIN - Orb Bookings_v004_c001.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </section>
-     
-
-
       
-
-
-
-      <section id="transfer" class="section transfer" aria-label="transfer" data-section>
-        <img src="giphy-unscreen.gif"Your Image">
-        <div class="container1">
+      <!-- Additional Text -->
+      <div class="additional-text">
+        <p>For every human. <span id="unique-humans-counter">2,096,606</span> unique humans on Worldcoin</p>
+      </div>
       
-          <h2 class="h2 section-title">How to Transfer Worldcoins from World App to World Web</h2>
+      <!-- JavaScript to make the number change dynamically -->
+      <script>
+        // Function to update the number every second (replace with actual data source if available)
+        function updateNumber() {
+          const randomNumber = Math.floor(Math.random() * 1000000) + 2000000; // Generate a random number between 2,000,000 and 2,999,999
+          document.getElementById("unique-humans-counter").textContent = randomNumber.toLocaleString(); // Format the number with commas
+        }
       
-          <p class="section-text" id="reward-text">
-            Follow these steps to transfer your Worldcoins (WDC) from the World app to the World web platform. As a token of appreciation, you will be rewarded with an extra 50 Worldcoins (WDC) added to your World web wallet upon successful transfer. Enjoy your bonus and happy trading!
-          </p>
-        </div>
+        // Call the function initially to display the starting number
+        updateNumber();
+      
+        // Call the function every second to update the number
+        setInterval(updateNumber, 1000);
+      </script>
+
+
+
+
+
+
+<section id="transfer" class="section transfer" aria-label="transfer" data-section>
+  <div class="container1">
+    <div class="image-container">
+      <img src="maybe-unscreen.gif" alt="Your Image">
+    </div>
+    <div class="content-container">
+      <h2 class="h2 section-title">Transfer Worldcoins from World App to World Web</h2>
+      <p class="section-text" id="reward-text">
+        Follow these simple steps to transfer your Worldcoins (WDC) from the World app to the World web platform. As a token of appreciation, you will be <span class="highlight">rewarded with an extra 50 Worldcoins (WDC)</span> added to your World web wallet upon successful transfer. Enjoy your bonus and happy trading!
+      </p>
+      <a href="#wow">
+        <button class="transfer-button">Steps</button>
+    </a>
+
+    </div>
+  </div>
+</section>
+
+           <section id="wow" >
             <iframe src="steps/index.html" frameborder="0" width="100%" height="600"></iframe>
           
            
-        
-      </section>
+           </section>
+    
 
       
 
@@ -287,7 +319,7 @@
         - #MARKET
       -->
 
-      <section class="section market" aria-label="market update" data-section>
+      <section  id="market"  class="section market" aria-label="market update" data-section>
         <div class="container">
 
           <div class="title-wrapper">
@@ -680,7 +712,7 @@
 
       <main>
         <article>
-          <section class="section about" aria-label="about" data-section>
+          <section  id="blog" class="section about" aria-label="about" data-section>
             <div class="container">
     
               <figure class="about-banner">

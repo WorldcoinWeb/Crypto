@@ -401,78 +401,251 @@ body.active { overflow: hidden; }
 
 
 
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
-
-/* General styles */
-.hero {
-  padding: 150px 40px; /* Adjusted padding for mobile */
+/* Style for the hero section container */
+#hero-section {
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
 }
 
-.hero-content {
-  margin-bottom: 40px; /* Adjusted margin for mobile */
+/* Style for the hero content */
+#hero-content {
+  text-align: center;
 }
 
-.hero-text {
-  font-size: var(--fs-5);
-  margin: 25px 0; /* Adjusted margin for mobile */
+/* Style for the hero title */
+#hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.5s;
 }
 
-/* Video styles */
-.video-wrapper {
-  position: relative; /* Add relative positioning to contain the video */
-  max-width: 100%; /* Ensures the video wrapper doesn't exceed container width */
-  overflow: hidden; /* Hides any overflowing video content */
-  margin: 25px 0; /* Adjusted margin for mobile */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-video {
-  width: 100%; /* Make the video player fill the width of its container */
-  height: auto; /* Allows the video to maintain its aspect ratio */
+/* Style for the hero text */
+#hero-text {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 1s;
 }
 
-/* Add an overlay to the video to improve visibility of text */
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Change the overlay color and opacity as needed */
-  z-index: 1; /* Place the overlay above the video */
+/* Style for the "Get started now" button */
+#get-started-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 1.5s;
 }
 
-/* Hide hero banner image on screens smaller than 768px (typical mobile devices) */
-@media screen and (max-width: 767px) {
-  .hero-banner {
-    display: none;
+#get-started-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  #hero-title {
+    font-size: 36px;
   }
 
-  /* Center align the video and content on screens smaller than 768px */
-  .hero-content {
-    text-align: center;
-  }
-  .video-wrapper {
-    text-align: center;
-  }
-
-  /* Adjust font sizes for screens smaller than 768px */
-  .h1.hero-title {
-    font-size: 24px;
-  }
-  .hero-text {
+  #hero-text {
     font-size: 16px;
   }
 
-  /* Center align and adjust button size for screens smaller than 768px */
-  .btn.btn-primary {
-    display: block;
-    width: 200px;
+  #get-started-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .hero-media {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #hero-banner img {
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
   }
+
+  #hero-video {
+    width: 100%;
+    max-width: 570px;
+    margin: 20px auto;
+  }
 }
+
+/* Style for the hero banner image */
+#hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: fadeInScale 1s forwards 2s;
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Style for the hero video */
+#hero-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeInScale 1s forwards 2s;
+}
+
+
+.additional-text {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.additional-text p {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  padding: 10px;
+}
+
+.additional-text span {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007bff; /* Blue color */
+}
+
+
+.container1 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1b1b1b;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
+.image-container {
+  flex: 1;
+  padding-right: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Styles */
+.content-container {
+  flex: 1;
+  text-align: center;
+}
+
+/* Title Styles */
+.section-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Text Styles */
+.section-text {
+  font-size: 22px;
+  color: #d0d0d0;
+  margin-bottom: 40px;
+}
+
+/* Highlighted Text Styles */
+.highlight {
+  font-size: 40px;
+  font-weight: bold;
+  color: #00e36d;
+}
+
+/* Button Styles */
+.transfer-button {
+  padding: 18px 36px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #00e36d;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.transfer-button:hover {
+  background-color: #00b755;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .image-container,
+  .content-container {
+    padding: 0;
+  }
+
+  .image-container {
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-text {
+    font-size: 20px;
+  }
+}
+
+
+
+
 
 .section2 {
   padding: 40px 0;
